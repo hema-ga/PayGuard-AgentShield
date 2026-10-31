@@ -26,7 +26,19 @@ export default function PaymentApprovalsPage() {
       </div>
 
       {withDrafts.length === 0 ? (
-        <p className="empty-state">No drafts are currently waiting for approval.</p>
+        <section className="card approval-empty-state" aria-labelledby="approval-empty-title">
+          <h2 id="approval-empty-title">Your approval queue is empty</h2>
+          <p>No invoice has created a payment draft in this browser session yet.</p>
+          <ol>
+            <li>Open <strong>Invoice checks</strong> and choose a fictional invoice.</li>
+            <li>Read it, then select <strong>Check invoice</strong>.</li>
+            <li>Continue to the payment draft. Matching invoices become ready for review; mismatches stay held until independently verified.</li>
+          </ol>
+          <p className="muted">For the normal demo flow, use the <strong>Invoice reviewer</strong> permission profile. The queue updates in this browser tab after the check runs.</p>
+          <button className="btn btn-primary" onClick={() => navigate('/invoice-checks')}>
+            Start an invoice check
+          </button>
+        </section>
       ) : (
         <table className="data-table">
           <thead>
@@ -66,3 +78,4 @@ export default function PaymentApprovalsPage() {
     </div>
   );
 }
+
