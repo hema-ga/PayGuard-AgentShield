@@ -1,0 +1,21 @@
+PAYGUARD — JUDGE QUICK START
+
+1. Right-click the downloaded ZIP and choose “Extract All”. This unpacks the files into a normal folder.
+2. Open that new folder and double-click Start PayGuard Demo.bat.
+3. Keep the black terminal window open. The app opens in your browser automatically. If it does not, open the local URL printed in the terminal.
+4. Select “MCP gateway” from the left menu.
+5. Click “Connect to PayGuard helper”. This connects only to the Python helper running on this same computer.
+6. Try “Read this fake invoice” and “Try a blocked bank change”. The page will show the helper's decision and reason.
+7. Choose the bank-change + prompt-injection case to see that text in the invoice is treated as untrusted, and the unregistered action is denied.
+8. Use Invoice checks, Payment approvals, and Audit log for the rest of the demo.
+
+Gateway endpoint for an MCP client: http://127.0.0.1:<port shown in terminal>/mcp
+Transport: MCP Streamable HTTP, JSON response mode. The server is local-only.
+
+All supplier, invoice, account, and payment information is fictional. No real payment,
+email, report submission, external API, or supplier system is connected. The approval
+confirmation records only a simulated outcome.
+
+Requirements: Python 3 installed; no packages or internet connection required.
+If startup fails, check that port 4173 is free and that the “python” command works.
+Press Ctrl+C in the terminal window to stop the app and gateway.

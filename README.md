@@ -57,4 +57,3 @@ For a short judge walkthrough, start on Overview and select **Open live MCP gate
 The gateway speaks the MCP JSON-RPC tool flow locally, but its invoice data, tools, and agents are synthetic demo implementations. It is not a production payment connector, vendor identity service, or cross-machine audit system.
 
 See `payguard/src/data/cases.js` for the six synthetic scenarios and `payguard/src/policy/gate.js` for the shared policy decisions.
-
