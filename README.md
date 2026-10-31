@@ -6,7 +6,7 @@ All supplier names, account identifiers, contact addresses, invoices, and paymen
 
 ## Open the local demo and standalone MCP gateway
 
-Open the `PayGuard-Production-Build` folder and double-click `Start PayGuard Demo.bat`. It starts a local-only Python server that serves the single-file web app and a standalone MCP Streamable HTTP endpoint at `/mcp`. It uses Python's standard library and needs no Node.js, package install, or internet access. It opens the browser automatically and chooses an available local port between 4173 and 4192. Keep the terminal window open during the demo; press `Ctrl+C` to stop it.
+Extract `PayGuard-Production-Build.zip`, then double-click `Start PayGuard Demo.bat`. It starts a local-only Python server that serves the single-file web app and a standalone MCP Streamable HTTP endpoint at `/mcp`. It uses Python's standard library and needs no Node.js, package install, or internet access. It opens the browser automatically and chooses an available local port between 4173 and 4192. Keep the terminal window open during the demo; press `Ctrl+C` to stop it.
 
 The server binds to loopback, checks browser origins, independently verifies the bundled signed tool manifest, exposes synthetic tools through JSON-RPC, and keeps a short in-memory decision log. For compatible MCP clients, use the `/mcp` URL printed in the terminal. The gateway supports JSON responses for MCP Streamable HTTP; it does not provide an SSE stream.
 
@@ -57,3 +57,4 @@ For a short judge walkthrough, start on Overview and select **Open live MCP gate
 The gateway speaks the MCP JSON-RPC tool flow locally, but its invoice data, tools, and agents are synthetic demo implementations. It is not a production payment connector, vendor identity service, or cross-machine audit system.
 
 See `payguard/src/data/cases.js` for the six synthetic scenarios and `payguard/src/policy/gate.js` for the shared policy decisions.
+
